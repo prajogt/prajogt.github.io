@@ -4,4 +4,4 @@ Hi my name is ***Timothius Prajogi*** and welcome to the repository for my perso
 
 ## Live Site
 
-You can visit the live site [here](https://prajogt.github.io).
+You can visit the live site [here](https://about.tjpsandbox.ca).
