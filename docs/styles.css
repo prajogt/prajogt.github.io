@@ -13,7 +13,7 @@
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.0);
 }
 
 .project-image {
@@ -26,8 +26,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 95%;
-  padding: 20px;
+  width: 90%;
+  padding: 18px;
   background-color: rgba(255, 255, 255, 0.9);
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
@@ -44,6 +44,10 @@ img.project-image {
 
 .landscape {
   height: auto;
+}
+
+.potrait {
+  height: fit-content;
 }
 
 /* Rest Stylings */
