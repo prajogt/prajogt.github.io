@@ -1,118 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Timothius Prajogi</title>
+  <script src="https://kit.fontawesome.com/6f5fcaf480.js" crossorigin="anonymous"></script>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+
 </head>
 <body>
 
   <header>
     <h1>Timothius Prajogi</h1>
     <p>3rd Year Computer Science Student @UofT</p>
+    <i id="menu_btn" class="fa-solid fa-bars fa-lg" onclick="openNav()"></i>
   </header>
 
-  </a>
-  <section class="outer">
-    <h2 class="parent">Contact Information</h2>
-    <div class="parent">
-      <a href="mailto:tim.prajogi@mail.utoronto.ca">
-        <img class="logo" src="assets/email.png" alt="Email"></a>
-      <a href="https://www.linkedin.com/in/timothius-prajogi-204710217" target="_blank">
-        <img class="logo" src="assets/linkedin.png" alt="LinkedIn"></a>
-      <a href="https://github.com/prajogt" target="_blank">
-        <img class="logo" src="assets/github.png" alt="GitHub"></a>
-    </div>
-    
-  </section>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul id="navigation">
+      <li>
+        <a href="javascript:void(0)" onclick="navigate('home.html')">
+          <i class="fa fa-home"></i>
+          <div class="text">Home</div>
+        </a>
+      </li>  
+      
+      <li>
+        <a href="javascript:void(0)" onclick="navigate('academics.html')">
+          <i class="fa fa-book"></i>
+          <div class="text">Academics</div>
+        </a>
+      </li>
 
-  <section class="education outer">
-    <h2>Education</h2>
-    <h3>University of Toronto, Class of 2025</h3>
-    <p>Computer Science Specialist, Statistics Minor</p>
+      <li>
+        <a href="javascript:void(0)" onclick="navigate('projects.html')">
+          <i class="fa fa-code"></i>
+          <div class="text">Projects</div>
+        </a>
+      </li>
 
-    <h3>Cardinal Carter Academy for the Arts, Class of 2021</h3>
-  </section>
+      <li>
+        <a href="assets/Timothius-P-Resume.pdf" download="timothius-prajogi-resume">
+          <i class="fa fa-download"></i>
+          <div class="text">Resume</div>
+        </a>
+      </li>
+  </ul>
+  </div>
 
-  <section class="experience outer">
-    <h2>See my projects here...</h2>
+  <section id="test"></section>
 
-    <section class="projects">
-        <div class="project-card">
-            <img class="project-image landscape" style="padding-top:35px;" src="assets/thrive-splash.png" alt="Thrive Screenshot">
-            <div class="project-details">
-            <h2>Thrive: Happy Habits</h2>
-            <p>
-                Developed with Robbie Lowenstein @ Bellwoods Strategic Capital. 
-                A <b>React Native</b> application using <b>Expo</b> to be on iOS and Android app stores, 
-                with a <b>Django</b> API server containerized in <b>Docker</b> and hosted on <b>Heroku</b>. 
-                Utilized a <b>PostgreSQL</b> database.
-
-            </p>
-            <!-- <p><strong>GitHub:</strong> <a href="https://github.com/your-username/project1" target="_blank" rel="noopener noreferrer">Project 1 Repository</a></p> -->
-            </div>
-        </div>
-
-        <div class="project-card">
-            <img class="project-image" src="assets/order-up.png" alt="Order-Up Screenshot">
-            <div class="project-details landscape">
-            <h2>Order-Up</h2>
-            <p>
-              An order management system complete with results/statistics page. Made in <b>Java</b> using <b>Spring Boot</b> for the backend and <b>JavaFX</b> for the application frontend. 
-              Demonstrating <b>OOP</b> and <b>clean architecture</b> practices.
-            </p>
-            <!-- <p><strong>GitHub:</strong> <a href="https://github.com/your-username/project1" target="_blank" rel="noopener noreferrer">Project 1 Repository</a></p> -->
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects">
-      <div class="project-card">
-        <img class="project-image" src="assets/branch-out.png" alt="Branch-Out Screenshot">
-        <div class="project-details portrait">
-        <h2>Branch-Out</h2>
-        <p>
-          A web based contacts page in the style of a family tree, where nodes reference contact info for other Users/family members. 
-          Built on the <b>Next JS</b> framework with <b>React</b>. Data stored using <b>MongoDB</b>. 
-        </p>
-        <!-- <p><strong>GitHub:</strong> <a href="https://github.com/your-username/project1" target="_blank" rel="noopener noreferrer">Project 1 Repository</a></p> -->
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img class="project-image" src="assets/bnb-sql.png" alt="BnB Screenshot">
-        <div class="project-details portrait">
-        <h2>Bed'n Breakfast</h2>
-        <p>
-          An AirBnB replica. Focus on data management with <b>MySQL</b> and <b>embedded SQL in Java</b>. 
-          Additional features include linear regression for price suggestions and <b>Apache OpenNLP</b> for natural language processing of user comments.
-        </p>
-        <!-- <p><strong>GitHub:</strong> <a href="https://github.com/your-username/project1" target="_blank" rel="noopener noreferrer">Project 1 Repository</a></p> -->
-        </div>
-      </div>
-    </section> 
-
-    <section class="projects">
-      <div class="project-card">
-        <img class="project-image" src="assets/311-epochs.png" alt="ML Screenshot">
-        <div class="project-details portrait">
-        <h2>ML Course Project</h2>
-        <p>
-          A machine learning project, <b>employing KNN, probabilistic models, and neural networks</b>. 
-          Implemented, modified, and analyzed models in <b>Python</b> using <b>PyTorch, Sci-Kit, and numpy</b> using data provided by Eedi, an online education platform.
-
-        </p>
-        <!-- <p><strong>GitHub:</strong> <a href="https://github.com/your-username/project1" target="_blank" rel="noopener noreferrer">Project 1 Repository</a></p> -->
-        </div>
-      </div>
-
-    </section> 
-
-  </section>
-
+  <script>
+    function navigate( page ) {
+      $( "#test" ).load( page )
+    }
+  </script>
   
+  <script>
+    navigate("home.html")
+  </script>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
 
 
 </body>
