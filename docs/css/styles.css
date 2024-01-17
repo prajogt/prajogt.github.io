@@ -146,6 +146,22 @@ ul#navigation li .fa {
   .sidenav a {font-size: 18px;}
 }
 
+/* Profile stylings */
+
+.profile-image-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  border-radius: 10%;
+  overflow: hidden;
+  width: 300px;
+}
+
+
 /* Rest of the Stylings */
 
 body {
