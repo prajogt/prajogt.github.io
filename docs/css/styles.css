@@ -1,235 +1,341 @@
-/* Project Card styles */
-
-.project-card {
-    position: relative;
-    width: 45%;
-    height: 250px;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-out;
-    margin: 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.project-card:hover {
-  transform: scale(1.0);
-}
-
-.project-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 90%;
-  padding: 18px;
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.project-card:hover .project-details {
-  transform: translateY(0);
-}
-
-img.project-image {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.landscape {
-  height: auto;
-}
-
-.potrait {
-  height: fit-content;
-}
-
-/* Side bar stylings */
-
-i#menu_btn {
-  cursor: pointer;
-  color: #ccc;
-}
-
-i#menu_btn:hover {
-  color: white;
-}
-
-ul#navigation {
-	padding: 0;
-	margin: 0;
-}
-
-ul#navigation > li {
-	display: block;
-	float: none;
-	clear: both;
-	border-top: 1px solid #373737;
-	border-bottom: 1px solid #2B2B2B;
-	cursor: pointer;
-	background-color: rgba(48, 48, 48, 0.6);
-	border-top: 1px solid rgba(55, 55, 55, 0.4);
- 	border-bottom: 1px solid rgba(43, 43, 43, 0.4);
-}
-
-ul#navigation > li > a {
-	color: #ccc;
-	font-size: 14px;
-}
-
-ul#navigation li:hover, ul#navigation li:focus {
-	background-color: rgba(54, 54, 54, 0.1);
-}
-
-ul#navigation li:hover a, ul#navigation li:focus a {
-	color: #f7f7f7;
-}
-
-ul#navigation li .text {
-	padding-left: 5%;
-	margin-left: 50px;
-	line-height: 45px;
-
-	-webkit-box-shadow: -3px 0 5px -4px #000;
-	box-shadow: -3px 0 5px -4px #000;
-}
-
-ul#navigation li .fa {
-	float: left;
-	line-height: 45px;
-	width: 50px;
-	text-align: center;
-	font-size: 27px;
-}
-
-/* The side navigation menu (taken from https://www.w3schools.com/howto/howto_js_sidenav.asp)*/
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; 
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-/* Profile stylings */
-
-.profile-image-container {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-image {
-  border-radius: 10%;
-  overflow: hidden;
-  width: 300px;
-}
-
-
-/* Rest of the Stylings */
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-section.outer {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h2, h3 {
-  color: #333;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
 }
 
-h1 {
-  border-bottom: 2px solid #333;
-  color: #fff
+.nav-tabs {
+    display: flex;
+    gap: 2rem;
 }
 
-h2 {
-  color: #333;
+.nav-tab {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+    color: #555;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.nav-tab:hover {
+    background: #f0f0f0;
+    color: #222;
 }
 
-li {
-  margin-bottom: 10px;
+.nav-tab.active {
+    background: #333;
+    color: #fff;
 }
 
-.education, .experience {
-  margin-bottom: 20px;
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
 }
 
-.projects {
-  display: flex;
-  flex: row;
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s;
 }
 
-img.logo {
-  width: 30px; /* Adjust the size as needed */
-  height: auto;
-  margin: 5px; /* Adjust the spacing as needed */
+.tab-content.active {
+    display: block;
 }
 
-.parent {
-  text-align: center;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.child {
-  display: inline-block;  
-  margin: 2px;
+/* Home Tab */
+.bio-section {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.bio-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    background: #ddd;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.bio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bio-content h1 {
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.bio-content p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: #555;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 0.7;
+}
+
+.social-links .logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Experience Tab */
+.experience-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section-header {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.items-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.item-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    gap: 2rem;
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.item-card-image {
+    width: 200px;
+    height: 150px;
+    flex-shrink: 0;
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.item-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-card-content {
+    flex: 1;
+}
+
+.item-card h3 {
+    margin-bottom: 0.5rem;
+    color: #222;
+    font-size: 1.5rem;
+}
+
+.item-card .date {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.item-card .preview {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Detail View */
+.detail-view {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 200;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+.detail-view.active {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detail-content {
+    background: #fff;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 3rem;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    background: #555;
+}
+
+.detail-content h2 {
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.detail-content .date {
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.detail-content a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.detail-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.detail-images img {
+    width: 100%;
+    border-radius: 4px;
+    background: #ddd;
+}
+
+.detail-text {
+    color: #555;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+/* Blog Tab */
+.blog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .bio-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item-card {
+        flex-direction: column;
+    }
+
+    .item-card-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .nav-tabs {
+        gap: 1rem;
+    }
+
+    .detail-content {
+        padding: 2rem 1.5rem;
+    }
 }

@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Timothius Prajogi</title>
-  <script src="https://kit.fontawesome.com/6f5fcaf480.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Timothius Prajogi - Portfolio</title>
+	<script src="https://kit.fontawesome.com/6f5fcaf480.js" crossorigin="anonymous"></script>
 
-  <script src="js/jquery-3.7.1.min.js"></script>
-
+	<script src="js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">Timothius Prajogi</div>
+            <div class="nav-tabs">
+                <div class="nav-tab active" data-tab="home">Home</div>
+                <div class="nav-tab" data-tab="experience">Experience</div>
+                <div class="nav-tab" data-tab="blog">Misc</div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Tab -->
+        <div class="tab-content active" id="home">
+            <div class="bio-section">
+                <div class="bio-image">
+                    <img src="https://via.placeholder.com/250" alt="Profile Picture">
+                </div>
+                <div class="bio-content">
+                    <h1>Hi, I'm Timothius Prajogi (Tim for short)</h1>
+                    <p>
+                        I'm a computer science student @UofT passionate about software development, 
+                        algorithms, and solving complex problems. With a focus in AI and experience in
+						system design, I love building projects that make a difference.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring new technologies and experimenting 
+						with new solutions. Outside of the lab, you can find me on the water: kayaking or 
+						fishing!
+                    </p>
+					<p>
+						tim[DOT]prajogi[AT]mail[DOT]utoronto[DOT]ca
+					</p>
+                    <a href="assets/Timothius-P-Resume.pdf" class="download-btn" download>Download Resume</a>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank">
+                            <img class="logo" src="assets/github.png" alt="GitHub">
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank">
+                            <img class="logo" src="assets/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <header>
-    <h1>Timothius Prajogi</h1>
-    <span>tim.prajogi AT mail DOT utoronto DOT ca</span>
-    <p>Computer Science @UofT</p>
-    <i id="menu_btn" class="fa-solid fa-bars fa-lg" onclick="openNav()"></i>
-  </header>
+        <!-- Experience Tab -->
+        <div class="tab-content" id="experience">
+            <div class="experience-sections">
+                <section>
+                    <h2 class="section-header">Work Experience</h2>
+                    <div class="items-grid" id="work-experience"></div>
+                </section>
+                <section>
+                    <h2 class="section-header">Projects</h2>
+                    <div class="items-grid" id="project-experience"></div>
+                </section>
+            </div>
+        </div>
 
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <ul id="navigation">
-      <li>
-        <a href="javascript:void(0)" onclick="navigate('home.html')">
-          <i class="fa fa-home"></i>
-          <div class="text">Home</div>
-        </a>
-      </li>  
+        <!-- Misc Tab -->
+        <div class="tab-content" id="blog">
+            <h2 class="section-header">Misc</h2>
+            <div class="blog-grid" id="blog-posts"></div>
+        </div>
+    </main>
 
-      <li>
-        <a href="javascript:void(0)" onclick="navigate('bio.html')">
-          <i class="fa fa-info-circle"></i>
-          <div class="text">Bio</div>
-        </a>
-      </li> 
-      
-      <li>
-        <a href="javascript:void(0)" onclick="navigate('academics.html')">
-          <i class="fa fa-book"></i>
-          <div class="text">Academics</div>
-        </a>
-      </li>
+    <!-- Detail View Modal -->
+    <div class="detail-view" id="detail-view">
+        <div class="detail-content">
+            <button class="close-btn">&times;</button>
+            <div id="detail-body"></div>
+        </div>
+    </div>
 
-      <li>
-        <a href="javascript:void(0)" onclick="navigate('projects.html')">
-          <i class="fa fa-code"></i>
-          <div class="text">Projects</div>
-        </a>
-      </li>
-
-      <li>
-        <a href="assets/Timothius-P-Resume.pdf" target="_blank">
-          <i class="fa fa-download"></i>
-          <div class="text">Resume</div>
-        </a>
-      </li>
-  </ul>
-  </div>
-
-  <section id="test"></section>
-
-  <script>
-    function navigate( page ) {
-      $( "#test" ).load( page )
-    }
-  </script>
-  
-  <script>
-    navigate("home.html")
-  </script>
-
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-  </script>
-
-
+    <script src="js/portfolio.js"></script>
 </body>
-</html
+</html>
