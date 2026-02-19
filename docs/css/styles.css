@@ -92,7 +92,7 @@ main {
 
 .bio-image {
     width: 250px;
-    height: 250px;
+    height: 300px;
     border-radius: 8px;
     background: #ddd;
     flex-shrink: 0;
