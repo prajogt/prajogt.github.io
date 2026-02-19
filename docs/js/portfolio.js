@@ -42,7 +42,13 @@ const projectExperience = [
 ];
 
 const blogPosts = [
-
+    {
+        title: "Salmon + Steel Season 2025",
+        date: "2025",
+        preview: "Great year, great fish!",
+        images: ["assets/steel.png", "assets/salmon.png"],
+        content: "First lake Ontario steel + solid year of kings + cohos"
+    }
 ];
 
 // Render functions
